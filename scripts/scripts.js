@@ -1,3 +1,11 @@
+
+let numerochamado
+let telefonedousuario
+let data
+let hora
+
+
+//inicio do backend do monitor de chamados
 const chamados = []
 
 const tempoLimite = 30 * 60 * 1000;
@@ -55,3 +63,5 @@ document.querySelector('#btn-adicionar').addEventListener('click', ()=> {
     chamados.push({ id: input.value, registro: new Date() })
   }
 })
+
+//fim do backend do monitor de chamados
