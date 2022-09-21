@@ -61,7 +61,7 @@ document.querySelector('#btn-adicionar').addEventListener('click', ()=> {
 //fim do backend do monitor de chamados
 
 //inicio do backend do gerador de texto pro email
-
+/**
 let inpnumerochamado = document.querySelector("#nch");
 let inptelefonedousuario = document.querySelector("#nusr");
 let inpdata = document.querySelector("#dttn");
@@ -72,10 +72,6 @@ let telefonedousuario = inptelefonedousuario.value;
 let data = inpdata.value;
 let hora = inphora.value;
 
-console.log(numerochamado);
-console.log(telefonedousuario);
-console.log(data);
-console.log(hora);
 
 /**
 let primeiratent =
@@ -84,8 +80,12 @@ let segundatent =
 
 let terceiratent =
  */
-function enviarValor() {
-  alert(document.getElementById("meu-input").value);
+function cadastrarDados(){
+  let inpnumerochamado = document.getElementById('nch').inpnumerochamado.value;
+  let inptelefonedousuario = document.getElementById('nusr').inpnumerochamado.value;
+  let inpdata = document.getElementById('dttn').inpdata.value;
+  let inphora = document.getElementById('htn').inphora.value;
+  alert(inpnumerochamado, inptelefonedousuario, inpdata, inphora);
 }
 
 
