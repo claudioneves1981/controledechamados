@@ -62,23 +62,23 @@
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
                     tabindex="0">
-                    <div>
-                        <form>
+                    <div class="mb-2">
+                        <form method="get">
                             <div class="row g-3">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Numero do chamado"
+                                    <input id="nch" type="text" class="form-control" placeholder="Numero do chamado"
                                         aria-label="First name">
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Nome do usuário"
+                                    <input id="nusr" type="text" class="form-control"
+                                        placeholder="N° de telefone do usuário" aria-label="Last name">
+                                </div>
+                                <div class="col">
+                                    <input id="dttn" type="text" class="form-control" placeholder="Data da tentativa"
                                         aria-label="Last name">
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Data da tentativa"
-                                        aria-label="Last name">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Horário da tentativa"
+                                    <input id="htn" type="text" class="form-control" placeholder="Horário da tentativa"
                                         aria-label="Last name">
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
                     </div>
                     <fieldset class="row mb-3">
                         <legend class="col-form-label col-sm-2 pt-0">Status do POO</legend>
-                        <div class="col-sm-10">
+                        <div class="mb-2 col-sm-10">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
                                     value="option1" checked>
@@ -109,29 +109,39 @@
                                 </label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Gerar texto</button>
+                        <button id="btn-gerartexto" type="submit" class="btn btn-primary">Gerar texto</button>
                     </fieldset>
                     <div>
 
+
+
+
                     </div>
-                </div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    </div>
+
+                <div class="row tab-pane fade justify-content-center" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
                     tabindex="0">
-                    <div>
-                        <input id="input-adicionar" />
-                        <button id="btn-adicionar">Adicionar</button>
+                    <div class="row  pb-2">
+                        <div class="p-0 col-6">
+                        <input id="input-adicionar" type="text" class=" form-control" placeholder="Insira o N° do chamado"
+                        aria-label="Last name" />
+                        </div>
+                        <div class="col-6">
+                        <button id="btn-adicionar" class="btn btn-primary">Adicionar</button>
+                        </div>
+                    </div>
                         <table>
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>Chamado</th>
-                                    <th>Restante</th>
+                                    <th class="col-6">Chamado</th>
+                                    <th class="col-6">Tempo para próximo contato</th>
                                 </tr>
                             </thead>
                             <tbody id="table-body">
                             </tbody>
                         </table>
-                    </div>
+                  
                 </div>
             </div>
         </div>

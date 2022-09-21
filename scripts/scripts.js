@@ -61,15 +61,32 @@ document.querySelector('#btn-adicionar').addEventListener('click', ()=> {
 //fim do backend do monitor de chamados
 
 //inicio do backend do gerador de texto pro email
-let numerochamado = document.querySelector("#nch");
-let telefonedousuario = document.querySelector("#nusr");
-let data = document.querySelector("#dttn");
-let hora = document.querySelector("#htn");
 
-let nch = numerochamado.value;
-let nusr = telefonedousuario.value;
-let dttn = data.value;
-let htn = hora.value;
+let inpnumerochamado = document.querySelector("#nch");
+let inptelefonedousuario = document.querySelector("#nusr");
+let inpdata = document.querySelector("#dttn");
+let inphora = document.querySelector("#htn");
+
+let numerochamado = inpnumerochamado.value;
+let telefonedousuario = inptelefonedousuario.value;
+let data = inpdata.value;
+let hora = inphora.value;
+
+console.log(numerochamado);
+console.log(telefonedousuario);
+console.log(data);
+console.log(hora);
+
+/**
+let primeiratent =
+
+let segundatent =
+
+let terceiratent =
+ */
+function enviarValor() {
+  alert(document.getElementById("meu-input").value);
+}
 
 
 
