@@ -2,7 +2,19 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="stylesheet" href="styles/styles.css" \>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles/styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,249 +23,120 @@
 
 <body>
 
-    <header>Monitor de chamados</header>
-
-
-    <!-- Funcionalidade de contar tempo do chamado e emitir um aviso quando passar os 30 minutos -->
-    <div>
-        <input id="input-adicionar" />
-        <button id="btn-adicionar">Adicionar</button>
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Chamado</th>
-                    <th>Restante</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-
-            </tbody>
-        </table>
-    </div>
-
-    <div>
-        <div>Gerador de emails</div>
-        <div class="specificity ai-text__heading" data-v-fa6f230e="" data-v-cab26260="">
-            <div class="ai-content grid" style="--prop-grid-width:1110px;" data-v-95b532b0="" data-v-fa6f230e="">
-                <div class="ai-content__container max-width-730 grid-item-full" data-v-164ff72a="" data-v-fa6f230e=""
-                    data-v-95b532b0="">
-                    <h1 class="h2 h2--desktop" data-v-83c3b90c="" data-v-fa6f230e="" data-v-164ff72a="">
-                        Deixe o Gerador de Conteúdo Fazer o Trabalho Pesado
-                    </h1>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid justify-content-center">
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
+        </nav>
+        <!-- Navbar -->
+    </header>
     </div>
-    <div class="ai-text__container" data-v-cab26260="">
-        <div class="ai-text__tabs" data-v-cab26260="">
-            <div class="ai-text__tab selected" data-v-cab26260="">
-                <p data-qa="aiwriter-btn-porcategoria" class="ai-text__text body-small body-small--desktop strong"
-                    data-v-83c3b90c="" data-v-cab26260="">
-                    Por Categoria
-                </p>
-            </div>
-            <div class="ai-text__tab" data-v-cab26260="">
-                <p data-qa="aiwriter-btn-divirta-se" class="ai-text__text body-small body-small--desktop strong"
-                    data-v-83c3b90c="" data-v-cab26260="">
-                    Divirta-se
-                </p>
-            </div>
-        </div>
-        <div class="ai-text__writer" data-v-cab26260="">
-            <div class="ai-text__content" data-v-cab26260="">
-                <div data-fetch-key="data-v-570953f1:0" class="specificity opacity" data-v-570953f1=""
-                    data-v-cab26260="">
-                    <div class="select-choice active" data-v-570953f1="">
-                        <div class="select-choice__content" data-v-570953f1="">
-                            <h4 class="select-choice__title h4 h4--desktop" data-v-83c3b90c="" data-v-570953f1="">
-                                Gerar por categoria
-                            </h4>
-                        </div>
-                        <div style="display:none;" data-v-570953f1=""></div>
-                        <form id="form" class="select-choice__form" data-v-570953f1="">
-                            <div class="select-choice__choice-list" data-v-570953f1="">
-                                <div class="select-choice__list-container" data-v-570953f1=""><svg alt="" width="16px"
-                                        height="17px" xmlns="http://www.w3.org/2000/svg"
-                                        class="select-choice__left-arrow up-to-small icon sprite-icons"
-                                        data-v-570953f1="">
-                                        <use href="/_nuxt/55a69633d32a9896c38999bae86354fe.svg#i-left"
-                                            xlink:href="/_nuxt/55a69633d32a9896c38999bae86354fe.svg#i-left"></use>
-                                    </svg> <span class="select-choice__buttons" data-v-570953f1="">
-                                        <div data-v-570953f1=""><label
-                                                data-qa="aiwriter-btn-category-restaurants&amp;food"
-                                                for="category-Restaurants &amp; Food"
-                                                class="select-choice__select-button" data-v-570953f1="">
-                                                Restaurantes e Comida
-                                            </label> <input id="category-Restaurants &amp; Food" type="radio"
-                                                name="category" class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label data-qa="aiwriter-btn-category-health&amp;living"
-                                                for="category-Health &amp; Living" class="select-choice__select-button"
-                                                data-v-570953f1="">
-                                                Saúde e Bem-Estar
-                                            </label> <input id="category-Health &amp; Living" type="radio"
-                                                name="category" class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label
-                                                data-qa="aiwriter-btn-category-sports&amp;entertainment"
-                                                for="category-Sports &amp; Entertainment"
-                                                class="select-choice__select-button" data-v-570953f1="">
-                                                Esportes e Entretenimento
-                                            </label> <input id="category-Sports &amp; Entertainment" type="radio"
-                                                name="category" class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label
-                                                data-qa="aiwriter-btn-category-beauty&amp;cosmetics"
-                                                for="category-Beauty &amp; Cosmetics"
-                                                class="select-choice__select-button" data-v-570953f1="">
-                                                Beleza e Cosméticos
-                                            </label> <input id="category-Beauty &amp; Cosmetics" type="radio"
-                                                name="category" class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label
-                                                data-qa="aiwriter-btn-category-events&amp;weddings"
-                                                for="category-Events &amp; Weddings"
-                                                class="select-choice__select-button" data-v-570953f1="">
-                                                Eventos e Casamentos
-                                            </label> <input id="category-Events &amp; Weddings" type="radio"
-                                                name="category" class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label
-                                                data-qa="aiwriter-btn-category-agriculture&amp;farming"
-                                                for="category-Agriculture &amp; Farming"
-                                                class="select-choice__select-button" data-v-570953f1="">
-                                                Agropecuária
-                                            </label> <input id="category-Agriculture &amp; Farming" type="radio"
-                                                name="category" class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label
-                                                data-qa="aiwriter-btn-category-fashion&amp;apparel"
-                                                for="category-Fashion &amp; Apparel"
-                                                class="select-choice__select-button" data-v-570953f1="">
-                                                Moda e Acessórios
-                                            </label> <input id="category-Fashion &amp; Apparel" type="radio"
-                                                name="category" class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label data-qa="aiwriter-btn-category-sustainability"
-                                                for="category-Sustainability" class="select-choice__select-button"
-                                                data-v-570953f1="">
-                                                Sustentabilidade
-                                            </label> <input id="category-Sustainability" type="radio" name="category"
-                                                class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label data-qa="aiwriter-btn-category-art&amp;design"
-                                                for="category-Art &amp; Design" class="select-choice__select-button"
-                                                data-v-570953f1="">
-                                                Arte e Design
-                                            </label> <input id="category-Art &amp; Design" type="radio" name="category"
-                                                class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label
-                                                data-qa="aiwriter-btn-category-music&amp;entertainment"
-                                                for="category-Music &amp; Entertainment"
-                                                class="select-choice__select-button" data-v-570953f1="">
-                                                Música e entretenimento
-                                            </label> <input id="category-Music &amp; Entertainment" type="radio"
-                                                name="category" class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label data-qa="aiwriter-btn-category-hotels&amp;travel"
-                                                for="category-Hotels &amp; Travel" class="select-choice__select-button"
-                                                data-v-570953f1="">
-                                                Hotéis e Viagens
-                                            </label> <input id="category-Hotels &amp; Travel" type="radio"
-                                                name="category" class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label data-qa="aiwriter-btn-category-smallbusiness"
-                                                for="category-Small Business" class="select-choice__select-button"
-                                                data-v-570953f1="">
-                                                Pequenas Empresas
-                                            </label> <input id="category-Small Business" type="radio" name="category"
-                                                class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label data-qa="aiwriter-btn-category-gaming"
-                                                for="category-Gaming" class="select-choice__select-button"
-                                                data-v-570953f1="">
-                                                Games
-                                            </label> <input id="category-Gaming" type="radio" name="category"
-                                                class="select-choice__input" data-v-570953f1=""></div>
-                                        <div data-v-570953f1=""><label
-                                                data-qa="aiwriter-btn-category-professionalservices"
-                                                for="category-Professional Services"
-                                                class="select-choice__select-button" data-v-570953f1="">
-                                                Prestação de Serviços
-                                            </label> <input id="category-Professional Services" type="radio"
-                                                name="category" class="select-choice__input" data-v-570953f1=""></div>
-                                    </span> <svg alt="" width="16px" height="17px" xmlns="http://www.w3.org/2000/svg"
-                                        class="select-choice__right-arrow up-to-small icon sprite-icons"
-                                        data-v-570953f1="">
-                                        <use href="/_nuxt/55a69633d32a9896c38999bae86354fe.svg#i-left"
-                                            xlink:href="/_nuxt/55a69633d32a9896c38999bae86354fe.svg#i-left"></use>
-                                    </svg></div>
+    <section class="container">
+        <div class="justify-content-center">
+            <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">Gerador de email</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">Monitor de chamados</button>
+                </li>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                    tabindex="0">
+                    <div>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Numero do chamado"
+                                        aria-label="First name">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Nome do usuário"
+                                        aria-label="Last name">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Data da tentativa"
+                                        aria-label="Last name">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Horário da tentativa"
+                                        aria-label="Last name">
+                                </div>
                             </div>
-                            <div style="display:none;" data-v-570953f1=""></div>
-                            <div style="display:none;" data-v-570953f1=""></div>
                         </form>
-                        <div class="select-choice__errors" data-v-570953f1=""><span data-v-570953f1="">
-                                <div style="display:none;" data-v-570953f1=""></div>
-                            </span> <span data-v-570953f1="">
-                                <div style="display:none;" data-v-570953f1=""></div>
-                            </span></div>
-                        <div class="select-choice__button-container" data-v-570953f1=""><button
-                                data-qa="aiwriter-btn-continue"
-                                class="button select-choice__button button--outline button--medium button--medium-mobile button--black"
-                                data-v-191d3c08="" data-v-570953f1=""><span class="button__ripples"
-                                    data-v-191d3c08=""></span>
-                                Continuar
-                            </button>
-                            <div style="display:none;" data-v-570953f1=""></div>
-                            <div style="display:none;" data-v-570953f1=""></div>
+                    </div>
+                    <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-2 pt-0">Status do POO</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    1° tentativa de contato
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    2° tentativa de contato
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    3° tentativa de contato
+                                </label>
+                            </div>
                         </div>
+                        <button type="submit" class="btn btn-primary">Gerar texto</button>
+                    </fieldset>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    tabindex="0">
+                    <div>
+                        <input id="input-adicionar" />
+                        <button id="btn-adicionar">Adicionar</button>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Chamado</th>
+                                    <th>Restante</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-        <div style="display:none;" data-v-cab26260=""></div>
-    </div>
-    <!--<div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc"
-        class="zyro-cookies" data-v-c2812018="">
-        <div class="zyro-cookies__content" data-v-c2812018="">
-            <div class="zyro-cookies__first-column" data-v-c2812018="">
-                <p class="zyro-cookies__main-title medium-up h4 h4--desktop" data-v-83c3b90c="" data-v-c2812018="">
-                    Sua privacidade é importante para nós
-                </p>
-                <h4 class="zyro-cookies__main-title up-to-medium body body--desktop strong" data-v-83c3b90c=""
-                    data-v-c2812018="">
-                    Sua privacidade é importante para nós
-                </h4> <span class="zyro-cookies__main-text body-small body-small--desktop no-margin" data-v-83c3b90c=""
-                    data-v-c2812018=""><span data-v-83c3b90c="" data-v-c2812018="">Nós e os nossos parceiros usamos
-                        cookies para armazenar e acessar dados pessoais (como o histórico do navegador) com o objetivo
-                        de analisar o tráfego e oferecer conteúdos e anúncios personalizados. Para saber mais sobre como
-                        nós e nossos parceiros usamos cookies e configurar suas preferências, clique em no botão
-                        "Configuração de Cookies" abaixo. Você pode revogar ou alterar as suas preferências a qualquer
-                        momento acessando a nossa Política de Cookies e clicando no link das suas configurações de
-                        cookie. Nós usamos um sistema unificado, que vai sincronizar as suas preferências em todos os
-                        sites participantes. Você pode ajustar suas preferências nas <span
-                            data-qa="cookiesbanner-button-settings" class="zyro-cookies__link" data-v-83c3b90c=""
-                            data-v-c2812018="">
-                            Configurações de Cookies
-                        </span>.</span></span> <button data-qa="cookiesbanner-button-acceptall"
-                    class="button medium-up button--small button--small-mobile button--black" data-v-191d3c08=""
-                    data-v-c2812018=""><span class="button__ripples" data-v-191d3c08=""></span>
-                    Aceitar cookies
-                </button>
-            </div>
-            <div class="zyro-cookies__second-column" data-v-c2812018="">
-                <p class="zyro-cookies__secondary-title body body--desktop strong" data-v-83c3b90c=""
-                    data-v-c2812018="">
-                    Nós e os nossos parceiros processamos dados para:
-                </p> <span class="zyro-cookies__secondary-text body-small body-small--desktop no-margin"
-                    data-v-83c3b90c="" data-v-c2812018=""><span data-v-83c3b90c="" data-v-c2812018="">Armazenar e/ou
-                        acessar informações em um dispositivo. Anúncios personalizados. Conteúdo personalizado. Análise
-                        de anúncios e conteúdos, análise sobre o público, desenvolvimento de produtos. Para mais
-                        informações, por favor, leia o nosso <a href="/br/cookie-policy" target="_blank"
-                            data-qa="cookiesbanner-link-policy" class="zyro-cookies__link" data-v-c2812018="">
-                            Política de Cookies
-                        </a>.</span></span>
-            </div>
-        </div>
-        <div class="zyro-cookies__button-wrapper up-to-medium" data-v-c2812018=""><button
-                data-qa="cookiesbanner-button-acceptall" class="button button--small button--small-mobile button--black"
-                data-v-191d3c08="" data-v-c2812018=""><span class="button__ripples" data-v-191d3c08=""></span>
-                Aceitar cookies
-            </button></div>
-    </div> -->
+    </section>
     <script src="scripts/scripts.js"></script>
 </body>
-
 
 </html>

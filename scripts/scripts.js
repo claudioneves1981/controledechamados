@@ -1,14 +1,8 @@
 
-let numerochamado
-let telefonedousuario
-let data
-let hora
-
-
 //inicio do backend do monitor de chamados
 const chamados = []
 
-const tempoLimite = 30 * 60 * 1000;
+const tempoLimite = 30 * 100 * 1000;
 
 const aoExpirar = (chamado) => {
   alert(`Chamado expirou: ${chamado.id}!`)
@@ -65,3 +59,20 @@ document.querySelector('#btn-adicionar').addEventListener('click', ()=> {
 })
 
 //fim do backend do monitor de chamados
+
+//inicio do backend do gerador de texto pro email
+let numerochamado = document.querySelector("#nch");
+let telefonedousuario = document.querySelector("#nusr");
+let data = document.querySelector("#dttn");
+let hora = document.querySelector("#htn");
+
+let nch = numerochamado.value;
+let nusr = telefonedousuario.value;
+let dttn = data.value;
+let htn = hora.value;
+
+
+
+
+//final do backend do gerador de texto pro email
+
