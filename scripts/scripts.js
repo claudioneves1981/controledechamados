@@ -61,32 +61,27 @@ document.querySelector('#btn-adicionar').addEventListener('click', ()=> {
 //fim do backend do monitor de chamados
 
 //inicio do backend do gerador de texto pro email
-/**
-let inpnumerochamado = document.querySelector("#nch");
-let inptelefonedousuario = document.querySelector("#nusr");
-let inpdata = document.querySelector("#dttn");
-let inphora = document.querySelector("#htn");
 
-let numerochamado = inpnumerochamado.value;
-let telefonedousuario = inptelefonedousuario.value;
-let data = inpdata.value;
-let hora = inphora.value;
+const btn = document.getElementById("btn-gerartexto")
+
+btn.addEventListener("click", function(){
+  
+  let inpnumerochamado = document.getElementById('nch').value;
+  let inptelefonedousuario = document.getElementById('nusr').value;
+  let inpdata = document.getElementById('dttn').value;
+  let inphora = document.getElementById('htn').value;
+
+  const div = document.getElementById("txtemail");
 
 
-/**
-let primeiratent =
+      //Criando elemento paragrapho
+  const paragrapho = document.createElement("p");
 
-let segundatent =
+  paragrapho.innerText = "O numero do chamado:   " + inpnumerochamado + "O telefone do Usuario:   " + inptelefonedousuario + "Data da tentativa:   " + inpdata + "Hora da tentativa:      " + inphora;
 
-let terceiratent =
- */
-function cadastrarDados(){
-  let inpnumerochamado = document.getElementById('nch').inpnumerochamado.value;
-  let inptelefonedousuario = document.getElementById('nusr').inpnumerochamado.value;
-  let inpdata = document.getElementById('dttn').inpdata.value;
-  let inphora = document.getElementById('htn').inphora.value;
-  alert(inpnumerochamado, inptelefonedousuario, inpdata, inphora);
-}
+  //imprimindo os dados na página html
+  div.append(paragrapho);
+});
 
 
 
