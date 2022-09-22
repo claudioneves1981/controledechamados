@@ -1,4 +1,3 @@
-
 //inicio do backend do monitor de chamados
 const chamados = []
 
@@ -77,7 +76,11 @@ btn.addEventListener("click", function(){
       //Criando elemento paragrapho
   const paragrapho = document.createElement("p");
 
-  paragrapho.innerText = "O numero do chamado:   " + inpnumerochamado + "O telefone do Usuario:   " + inptelefonedousuario + "Data da tentativa:   " + inpdata + "Hora da tentativa:      " + inphora;
+  paragrapho.innerText = `${inpnumerochamado} - 1º aviso de tentativa de contato com o cliente
+  Prezado Cliente,
+  A equipe de Suporte Técnico Remoto informa que não obteve sucesso na 1ª tentativa de contato pelo(s) telefone(s) ${inptelefonedousuario} realizada no dia ${inpdata} às ${inphora} com o objetivo de iniciar o atendimento da ${inpnumerochamado}. 
+  Dessa forma, realizaremos uma tentativa de atendimento sem contato telefônico, aplicando procedimento técnico com o objetivo de solucionar a demanda do chamado sem que haja interferência na utilização do seu microcomputador.  
+  Eventualmente, poderá ser necessário autorização para acessar a sua área de trabalho. Se for o caso, enviaremos uma solicitação de acesso que aparecerá no centro do seu monitor, conforme janela apresentada abaixo:`;
 
   //imprimindo os dados na página html
   div.append(paragrapho);
