@@ -75,9 +75,8 @@
                                         placeholder="N° de telefone do usuário" aria-label="Last name">
                                 </div>
                                 <div class="col">
-                                    <input id="dttn" type="date" value=""
-                                    min="1997-01-01" max="2030-12-31" class="form-control" placeholder="Data da tentativa"
-                                        aria-label="Last name">
+                                    <input id="dttn" type="date" value="" min="1997-01-01" max="2030-12-31"
+                                        class="form-control" placeholder="Data da tentativa" aria-label="Last name">
                                 </div>
                                 <div class="col">
                                     <input id="htn" type="time" class="form-control" placeholder="Horário da tentativa"
@@ -91,27 +90,30 @@
                                 <div class="mb-2 col-sm-10">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                            value="1°" checked>
+                                            value="1" checked>
                                         <label class="form-check-label" for="gridRadios1">
                                             1° tentativa de contato
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                            value="2°">
+                                            value="2">
                                         <label class="form-check-label" for="gridRadios2">
                                             2° tentativa de contato
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
-                                            value="3°">
-                                        <label class="form-check-label" for="gridRadios2">
+                                            value="3">
+                                        <label class="form-check-label" for="gridRadios3">
                                             3° tentativa de contato
                                         </label>
                                     </div>
                                 </div>
-                                <input id="btn-gerartexto" type="button" class="btn btn-primary" value="Gerar texto"></input>
+                                <div class="row">
+                                <input id="btn-gerartexto" type="button" class="col-6 ml-3 btn btn-primary" value="Gerar texto"></input>
+                                <input onclick="copiarTexto()" id="btn-copiartexto" type="button" class="col-6 btn btn-primary" value="Copiar texto"></input>
+                                </div>
                         </form>
                         </fieldset>
                     </div>

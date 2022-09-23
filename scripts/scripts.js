@@ -63,47 +63,88 @@ document.querySelector('#btn-adicionar').addEventListener('click', () => {
 
 const btn = document.getElementById("btn-gerartexto")
 
-btn.addEventListener("click", function () {
+const radios = document.getElementsByName('gridRadios');
 
-  let inpnumerochamado = document.getElementById('nch').value;
-  let inptelefonedousuario = document.getElementById('nusr').value;
-  let inpdata = document.getElementById('dttn').value;
-  let inphora = document.getElementById('htn').value;
+  let string;
 
-  const div = document.getElementById("txtemail");
+ 
 
+  btn.addEventListener("click", function () {
 
-  inpdata = new Date();
-  let inpdataFormatada = ((inpdata.getDate() )) + "/" + ((inpdata.getMonth() + 1)) + "/" + inpdata.getFullYear(); 
+    let inpnumerochamado = document.getElementById('nch').value;
+    let inptelefonedousuario = document.getElementById('nusr').value;
+    let inpdata = document.getElementById('dttn').value;
+    let inphora = document.getElementById('htn').value;
 
-
-  //Criando elemento paragrapho
-  const paragrapho = document.createElement("p");
+    const div = document.getElementById("txtemail");
 
 
-  paragrapho.innerText = `${inpnumerochamado} - 3º aviso de tentativa de contato com o cliente
-  Prezado Cliente,
-  A equipe de Suporte Técnico Remoto informa que não obteve sucesso na 3ª tentativa de contato pelo(s) telefone(s) ${inptelefonedousuario} realizada no dia ${inpdataFormatada} às ${inphora} com o objetivo de iniciar o atendimento da ${inpnumerochamado}. 
-  Dessa forma, realizaremos uma tentativa de atendimento sem contato telefônico, aplicando procedimento técnico com o objetivo de solucionar a demanda do chamado sem que haja interferência na utilização do seu microcomputador.  
-  Eventualmente, poderá ser necessário autorização para acessar a sua área de trabalho. Se for o caso, enviaremos uma solicitação de acesso que aparecerá no centro do seu monitor, conforme janela apresentada abaixo:
+    inpdata = new Date();
+    let inpdataFormatada = ((inpdata.getDate())) + "/" + ((inpdata.getMonth() + 1)) + "/" + inpdata.getFullYear();
 
 
-Neste caso, basta clicar no botão “ACCEPT”, para que o atendimento seja iniciado.
-Caso não seja possível atender diretamente a demanda sem contato telefônico ou caso não seja respondido ou não autorizado o acesso remoto, esta demanda será concluída sem o devido atendimento, sendo considerado como um chamado improdutivo.
+    //Criando elemento paragrapho
+    const paragrapho1 = document.createElement("p");
+    const paragrapho2 = document.createElement("p");
 
-Atenciosamente,
-Warleyson Costa Roma `;
+    const imagem = document.createElement("img");
 
-const imagem = document.createElement("img");
+    const radios = document.getElementsByName('gridRadios');
 
-imagem.src = "src/imgpoo.png";
+    let string;
+
+    let strgtent1;
+
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].type === "radio") {
+            if (radios[i].checked) {
+                string = radios[i].value;
+                break;
+            }
+        }
+    }
+
+    for (let i = 0; i < radios.length; i++) {
+      if (radios[i].id === "gridRadios1", "gridRadios2") {
+          if (radios[i].checked) {
+            strgtent1 = "mais uma";
+              
+          }
+      }
+
+      if (radios[i].id === "gridRadios3") {
+        if (radios[i].checked) {
+          strgtent1 = "a última";
+          break;
+        }
+    }
+  }
+
+    paragrapho1.innerText = `${inpnumerochamado} - `.concat(string).concat(`° aviso de tentativa de contato com o cliente
+    Prezado Cliente,
+    A equipe de Suporte Técnico Remoto informa que não obteve sucesso na `) .concat(string).concat(`ª tentativa de contato pelo(s) telefone(s) ${inptelefonedousuario} realizada no dia ${inpdataFormatada} às ${inphora} com o objetivo de iniciar o atendimento da ${inpnumerochamado}.
+    Dessa forma, realizaremos ${strgtent1} tentativa de atendimento sem contato telefônico, aplicando procedimento técnico com o objetivo de solucionar a demanda do chamado sem que haja interferência na utilização do seu microcomputador.
+    Eventualmente, poderá ser necessário autorização para acessar a sua área de trabalho. Se for o caso, enviaremos uma solicitação de acesso que aparecerá no centro do seu monitor, conforme janela apresentada abaixo:
+    `)
 
 
-  //imprimindo os dados na página html
-  div.append(paragrapho);
+    paragrapho2.innerText = `
+    Neste caso, basta clicar no botão “ACCEPT”, para que o atendimento seja iniciado.
+    Caso não seja possível atender diretamente a demanda sem contato telefônico ou caso não seja respondido ou não autorizado o acesso remoto, esta demanda será concluída sem o devido atendimento, sendo considerado como um chamado improdutivo.
+
+    Atenciosamente,
+    Warleyson Costa Roma `;
+
+    imagem.src = "src/imgpoo.png";
+
+    //imprimindo os dados na página html
+
+    div.append(paragrapho1);
+
+    div.append(imagem);
+
+    div.append(paragrapho2);
 });
-
-
 
 
 //final do backend do gerador de texto pro email
