@@ -60,12 +60,12 @@
                 </li>
                 </li>
             </ul>
-            <div class="tab-content" id="pills-tabContent">
+            <div class="justify-content-center tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
                     tabindex="0">
-                    <div class="mb-2">
+                    <div class="">
                         <form id="dados">
-                            <div class="row g-3">
+                            <div class="row col-12 p-0 mb-2 mr-0 ml-0">
                                 <div class="col">
                                     <input id="nch" type="text" class="form-control" placeholder="Numero do chamado"
                                         aria-label="First name">
@@ -85,9 +85,9 @@
                             </div>
 
 
-                            <fieldset class="row mb-3">
-                                <legend class="col-form-label col-sm-2 pt-0">Status do POO</legend>
-                                <div class="mb-2 col-sm-10">
+                            <fieldset class="row col-12 p-0">
+                                <legend class="pt-4 text-center col-form-label col-sm-6">Status do POO</legend>
+                                <div class="row mb-2 col-sm-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
                                             value="1" checked>
@@ -110,19 +110,21 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="row">
-                                <input id="btn-gerartexto" type="button" class="col-6 ml-3 btn btn-primary" value="Gerar texto"></input>
-                                <!--<input onclick="copiarTexto()" id="btn-copiartexto" type="button" class="col-6 btn btn-primary" value="Copiar texto"></input>-->
+
+                                <div class="row col-12 p-0">
+                                    <div class="col-10">
+                                        <input id="btn-gerartexto" type="button" class="w-100 pl-6 btn btn-primary"
+                                            value="Gerar texto"></input>
+                                    </div>
+                                    <div class="col-2">
+                                        <input onclick="copiarTexto()" id="btn-copiartexto" type="button"
+                                            class="w-auto btn btn-primary" value="Copiar texto"></input>
+                                    </div>
                                 </div>
                         </form>
                         </fieldset>
                     </div>
-                    <div id="txtemail">
-
-
-
-
-                    </div>
+                    <div id="txtemail"></div>
                 </div>
 
                 <div class="row tab-pane fade justify-content-center" id="pills-profile" role="tabpanel"
