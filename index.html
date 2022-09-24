@@ -60,70 +60,67 @@
                 </li>
                 </li>
             </ul>
-            <div class="justify-content-center tab-content" id="pills-tabContent">
+            <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
                     tabindex="0">
-                    <div class="">
-                        <form id="dados">
-                            <div class="row col-12 p-0 mb-2 mr-0 ml-0">
-                                <div class="col">
-                                    <input id="nch" type="text" class="form-control" placeholder="Numero do chamado"
-                                        aria-label="First name">
+                    <form id="dados">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <input id="nch" type="text" class="form-control" placeholder="Numero do chamado"
+                                    aria-label="First name">
+                            </div>
+                            <div class="col">
+                                <input id="nusr" type="text" class="form-control"
+                                    placeholder="N° de telefone do usuário" aria-label="Last name">
+                            </div>
+                            <div class="col">
+                                <input id="dttn" type="date" value="" min="1997-01-01" max="2030-12-31"
+                                    class="form-control" placeholder="Data da tentativa" aria-label="Last name">
+                            </div>
+                            <div class="col">
+                                <input id="htn" type="time" class="form-control" placeholder="Horário da tentativa"
+                                    aria-label="Last name">
+                            </div>
+                        </div>
+
+                        <div class="row m-0">
+                            <div class="mb-2 text-center col-form-label col-6">Status do POO</div>
+                            <div class="row mb-2 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                        value="1" checked>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        1° tentativa de contato
+                                    </label>
                                 </div>
-                                <div class="col">
-                                    <input id="nusr" type="text" class="form-control"
-                                        placeholder="N° de telefone do usuário" aria-label="Last name">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                        value="2">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        2° tentativa de contato
+                                    </label>
                                 </div>
-                                <div class="col">
-                                    <input id="dttn" type="date" value="" min="1997-01-01" max="2030-12-31"
-                                        class="form-control" placeholder="Data da tentativa" aria-label="Last name">
-                                </div>
-                                <div class="col">
-                                    <input id="htn" type="time" class="form-control" placeholder="Horário da tentativa"
-                                        aria-label="Last name">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                        value="3">
+                                    <label class="form-check-label" for="gridRadios3">
+                                        3° tentativa de contato
+                                    </label>
                                 </div>
                             </div>
 
-
-                            <fieldset class="row col-12 p-0">
-                                <legend class="pt-4 text-center col-form-label col-sm-6">Status do POO</legend>
-                                <div class="row mb-2 col-sm-6">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                            value="1" checked>
-                                        <label class="form-check-label" for="gridRadios1">
-                                            1° tentativa de contato
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                            value="2">
-                                        <label class="form-check-label" for="gridRadios2">
-                                            2° tentativa de contato
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
-                                            value="3">
-                                        <label class="form-check-label" for="gridRadios3">
-                                            3° tentativa de contato
-                                        </label>
-                                    </div>
+                            <div class="row p-o">
+                                <div class="col-8">
+                                    <input id="btn-gerartexto" type="button" class="col-12 btn btn-primary"
+                                        value="Gerar texto"></input>
                                 </div>
-
-                                <div class="row col-12 p-0">
-                                    <div class="col-10">
-                                        <input id="btn-gerartexto" type="button" class="w-100 pl-6 btn btn-primary"
-                                            value="Gerar texto"></input>
-                                    </div>
-                                    <div class="col-2">
-                                        <input onclick="copiarTexto()" id="btn-copiartexto" type="button"
-                                            class="w-auto btn btn-primary" value="Copiar texto"></input>
-                                    </div>
+                                <div class="col-4">
+                                    <input onclick="copiarTexto()" id="btn-copiartexto" type="button"
+                                        class="w-100 pr-0 m-0 b-0 col-12 btn btn-primary" value="Copiar texto"></input>
                                 </div>
-                        </form>
-                        </fieldset>
-                    </div>
+                            </div>
+                        </div>
+                    </form>
                     <div id="txtemail"></div>
                 </div>
 
