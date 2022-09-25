@@ -62,89 +62,119 @@ document.querySelector('#btn-adicionar').addEventListener('click', () => {
 //inicio do backend do gerador de texto pro email
 
 const btn = document.getElementById("btn-gerartexto")
+const btn2 = document.getElementById("btn-copiartexto")
 
-const radios = document.getElementsByName('gridRadios');
 
+/**
+const paragrapho1 = document.createElement("p");
+const paragrapho2 = document.createElement("p");
+const imagem = document.createElement("img");
+ */
+btn.addEventListener("click", function () {
+
+  const radios = document.getElementsByName('gridRadios');
+  let inpnumerochamado = document.getElementById('nch').value;
+  let inptelefonedousuario = document.getElementById('nusr').value;
+  let inpdata = document.getElementById('dttn').value;
+  let inphora = document.getElementById('htn').value;
   let string;
+  let strgtent1;
 
- 
+  const divtxt = document.getElementById("txtemail");
 
-  btn.addEventListener("click", function () {
+  //tratanto o formato que a data vai ser exibida no texto mediante o click no botão
+  inpdata = new Date();
+  let inpdataFormatada = ((inpdata.getDate())) + "/" + ((inpdata.getMonth() + 1)) + "/" + inpdata.getFullYear();
 
-    let inpnumerochamado = document.getElementById('nch').value;
-    let inptelefonedousuario = document.getElementById('nusr').value;
-    let inpdata = document.getElementById('dttn').value;
-    let inphora = document.getElementById('htn').value;
+  //Criando elemento paragrapho
+  const paragrapho1 = document.createElement("p");
+  const paragrapho2 = document.createElement("p");
+  const imagem = document.createElement("img");
 
-    const div = document.getElementById("txtemail");
-
-
-    inpdata = new Date();
-    let inpdataFormatada = ((inpdata.getDate())) + "/" + ((inpdata.getMonth() + 1)) + "/" + inpdata.getFullYear();
-
-
-    //Criando elemento paragrapho
-    const paragrapho1 = document.createElement("p");
-    const paragrapho2 = document.createElement("p");
-
-    const imagem = document.createElement("img");
-
-    const radios = document.getElementsByName('gridRadios');
-
-    let string;
-
-    let strgtent1;
-
-    for (let i = 0; i < radios.length; i++) {
-        if (radios[i].type === "radio") {
-            if (radios[i].checked) {
-                string = radios[i].value;
-                break;
-            }
-        }
-    }
-
-    for (let i = 0; i < radios.length; i++) {
-      if (radios[i].id === "gridRadios1", "gridRadios2") {
-          if (radios[i].checked) {
-            strgtent1 = "mais uma";
-              
-          }
+  //lógica para os radio buttons exibirem o n° correspondente a tentativa de contato
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].type === "radio") {
+      if (radios[i].checked) {
+        string = radios[i].value;
+        break;
       }
-
-      if (radios[i].id === "gridRadios3") {
-        if (radios[i].checked) {
-          strgtent1 = "a última";
-          break;
-        }
     }
   }
 
-    paragrapho1.innerText = `${inpnumerochamado} - `.concat(string).concat(`° aviso de tentativa de contato com o cliente
+  //lógica para os radio buttons exibirem mudarem uma parte do texto correspondente a tentativa de contato
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].id === "gridRadios1", "gridRadios2") {
+      if (radios[i].checked) {
+        strgtent1 = "mais uma";
+      }
+    }
+
+    if (radios[i].id === "gridRadios3") {
+      if (radios[i].checked) {
+        strgtent1 = "a última";
+        break;
+      }
+    }
+  }
+
+  paragrapho1.innerText = `${inpnumerochamado} - `.concat(string).concat(`° aviso de tentativa de contato com o cliente
     Prezado Cliente,
-    A equipe de Suporte Técnico Remoto informa que não obteve sucesso na `) .concat(string).concat(`ª tentativa de contato pelo(s) telefone(s) ${inptelefonedousuario} realizada no dia ${inpdataFormatada} às ${inphora} com o objetivo de iniciar o atendimento da ${inpnumerochamado}.
+    A equipe de Suporte Técnico Remoto informa que não obteve sucesso na `).concat(string).concat(`ª tentativa de contato pelo(s) telefone(s) ${inptelefonedousuario} realizada no dia ${inpdataFormatada} às ${inphora} com o objetivo de iniciar o atendimento da ${inpnumerochamado}.
     Dessa forma, realizaremos ${strgtent1} tentativa de atendimento sem contato telefônico, aplicando procedimento técnico com o objetivo de solucionar a demanda do chamado sem que haja interferência na utilização do seu microcomputador.
     Eventualmente, poderá ser necessário autorização para acessar a sua área de trabalho. Se for o caso, enviaremos uma solicitação de acesso que aparecerá no centro do seu monitor, conforme janela apresentada abaixo:
     `)
 
 
-    paragrapho2.innerText = `
+  paragrapho2.innerText = `
     Neste caso, basta clicar no botão “ACCEPT”, para que o atendimento seja iniciado.
     Caso não seja possível atender diretamente a demanda sem contato telefônico ou caso não seja respondido ou não autorizado o acesso remoto, esta demanda será concluída sem o devido atendimento, sendo considerado como um chamado improdutivo.
 
     Atenciosamente,
     Warleyson Costa Roma `;
 
-    imagem.src = "src/imgpoo.png";
+  imagem.src = "src/imgpoo.png";
 
-    //imprimindo os dados na página html
+  //imprimindo os dados na página html
 
-    div.append(paragrapho1);
+  /**
+  console.log(paragrapho1);
+  console.log(imagem);
+  console.log(paragrapho2);
+ */
+  divtxt.append(paragrapho1);
+  divtxt.append(imagem);
+  divtxt.append(paragrapho2);
 
-    div.append(imagem);
+  console.log(divtxt);
 
-    div.append(paragrapho2);
+
+  btn2.addEventListener("click", function () {
+
+    cpydivtxt = divtxt
+
+    cpydivtxt.select();
+    cpydivtxt.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(cpydivtxt.value);
+
+    alert("Copied the text: " + cpydivtxt.value);
+
+    //console.log(divtxt);
+  
+  });
+
+
+
+
 });
+
+
+
+
+
+//lógica para botão copiar texto
+
+
 
 
 //final do backend do gerador de texto pro email
