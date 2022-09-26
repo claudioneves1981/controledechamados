@@ -152,11 +152,11 @@ btn.addEventListener("click", function () {
 
   btn2.addEventListener("click", function () {
 
-    let copytxt = divtxt.innerHTML;
+    let copytxt = divtxt.innerText;
     
   
-    console.log(copytxt);
-    navigator.clipboard.write(copytxt);
+    //console.log(copytxt);
+    navigator.clipboard.writeText(copytxt);
     
     
 
