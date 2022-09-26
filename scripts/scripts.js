@@ -148,18 +148,19 @@ btn.addEventListener("click", function () {
   console.log(divtxt);
 
 
+//lógica para botão copiar texto
+
   btn2.addEventListener("click", function () {
 
-    cpydivtxt = divtxt
+    let copytxt = divtxt.innerHTML;
+    
+  
+    console.log(copytxt);
+    navigator.clipboard.write(copytxt);
+    
+    
 
-    cpydivtxt.select();
-    cpydivtxt.setSelectionRange(0, 99999);
-
-    navigator.clipboard.writeText(cpydivtxt.value);
-
-    alert("Copied the text: " + cpydivtxt.value);
-
-    //console.log(divtxt);
+    //console.log(copytxt);
   
   });
 
@@ -172,7 +173,7 @@ btn.addEventListener("click", function () {
 
 
 
-//lógica para botão copiar texto
+
 
 
 
