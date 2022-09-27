@@ -63,6 +63,7 @@ document.querySelector('#btn-adicionar').addEventListener('click', () => {
 
 const btn = document.getElementById("btn-gerartexto")
 const btn2 = document.getElementById("btn-copiartexto")
+const btn3 = document.getElementById("btn-apagartexto")
 
 
 /**
@@ -157,6 +158,20 @@ btn.addEventListener("click", function () {
   
     //console.log(copytxt);
     navigator.clipboard.writeText(copytxt);
+    
+    
+
+    //console.log(copytxt);
+  
+  });
+
+  btn3.addEventListener("click", function () {
+
+    let clrtxt = document.getElementById("txtemail");
+    
+  
+    //console.log(copytxt);
+    clrtxt.innerText = "";
     
     
 
