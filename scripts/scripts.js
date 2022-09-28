@@ -63,15 +63,9 @@ document.querySelector('#btn-adicionar').addEventListener('click', () => {
 
 const btn = document.getElementById("btn-gerartexto")
 const btn2 = document.getElementById("btn-copiartexto")
-const btn3 = document.getElementById("btn-apagartexto")
+//const btn3 = document.getElementById("btn-apagartexto")
 
-
-/**
-const paragrapho1 = document.createElement("p");
-const paragrapho2 = document.createElement("p");
-const imagem = document.createElement("img");
- */
-btn.addEventListener("click", function () {
+btn.addEventListener("click",  ()=> {
 
   const radios = document.getElementsByName('gridRadios');
   let inpnumerochamado = document.getElementById('nch').value;
@@ -103,6 +97,7 @@ btn.addEventListener("click", function () {
   }
 
   //lógica para os radio buttons exibirem mudarem uma parte do texto correspondente a tentativa de contato
+
   for (let i = 0; i < radios.length; i++) {
     if (radios[i].id === "gridRadios1", "gridRadios2") {
       if (radios[i].checked) {
@@ -135,51 +130,36 @@ btn.addEventListener("click", function () {
 
   imagem.src = "src/imgpoo.png";
 
-  //imprimindo os dados na página html
-
-  /**
-  console.log(paragrapho1);
-  console.log(imagem);
-  console.log(paragrapho2);
- */
   divtxt.append(paragrapho1);
   divtxt.append(imagem);
   divtxt.append(paragrapho2);
 
-  console.log(divtxt);
+  //console.log(divtxt);
 
 
-//lógica para botão copiar texto
-
-  btn2.addEventListener("click", function () {
-
+  //lógica para botão copiar texto
+  btn2.addEventListener("click", ()=> {
+    //let mstnumch = inpnumerochamado;
     let copytxt = divtxt.innerText;
-    
-  
-    //console.log(copytxt);
-    navigator.clipboard.writeText(copytxt);
-    
-    
-
-    //console.log(copytxt);
-  
+    navigator.clipboard.writeText(copytxt).then(() => {
+      
+      //alert(`Chamado n° ${mstnumch} copiado para area de transferencia!`);
   });
 
-  btn3.addEventListener("click", function () {
-
-    let clrtxt = document.getElementById("txtemail");
-    
-  
-    //console.log(copytxt);
-    clrtxt.innerText = "";
-    
-    
-
-    //console.log(copytxt);
-  
   });
 
+  //lógica para botão apagar texto
+  document.getElementById('infs').onreset = ()=>{
+    let clrtext = divtxt;
+    clrtext.innerText = "";
+      //return confirm("Gostaria de apagar todas as informações?");
+    };
 
+
+
+
+ 
+ 
 
 
 });
