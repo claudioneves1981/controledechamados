@@ -155,22 +155,7 @@ btn.addEventListener("click",  ()=> {
       //return confirm("Gostaria de apagar todas as informações?");
     };
 
-
-
-
- 
- 
-
-
 });
-
-
-
-
-
-
-
-
 
 
 //final do backend do gerador de texto pro email
