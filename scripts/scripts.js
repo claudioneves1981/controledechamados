@@ -150,8 +150,9 @@ btn.addEventListener("click", () => {
       if (radios[i].checked) {
         paragrapho1.innerText = `${inpnumerochamado} - `.concat(` Chamado Fechado
         Prezado Cliente,
-        A equipe de Suporte Técnico Remoto informa que após 3 tentativas de contato (por telefone e e-mail) para atendimento da ${inpnumerochamado}, não foi possível proceder com o atendimento do chamado, sendo concluído como improdutivo.
         
+        A equipe de Suporte Técnico Remoto informa que após 3 tentativas de contato (por telefone e e-mail) para atendimento da ${inpnumerochamado}, não foi possível proceder com o atendimento do chamado, sendo concluído como improdutivo.
+
         Caso ainda necessite de suporte técnico, solicitamos registrar um novo chamado, uma vez que a reabertura desse será considerada indevida.
 
         Ressaltamos que a equipe de Suporte Técnico preza pela segurança das informações do usuário e por isso adota procedimentos relacionados as tentativas de contato e autorização de usuário para realização do atendimento.
