@@ -24,6 +24,7 @@ const intv = setInterval(() => {
     const restante = msRestante(chamado.registro, new Date())
     cels[1].innerText = chamado.id;
     cels[2].innerText = fmtRestante(restante)
+    cels[3].innerHTML = btnresetar
 
     if (restante <= 0) {
       // logica pra chamado expirado
@@ -48,6 +49,7 @@ const fmtRestante = (restante) => {
 
 const input = document.querySelector("#input-adicionar")
 const tbody = document.querySelector("#table-body")
+
 
 document.querySelector('#btn-adicionar').addEventListener('click', () => {
   if (input.value
